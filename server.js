@@ -19,7 +19,7 @@ const checkRateLimit = require('./lib/rate-limit')(process.env.CORSESCAPE_RATELI
 const corsProxy = require('./lib/cors-escape');
 corsProxy.createServer({
     originBlacklist,
-    originWhitelist: ['http://localhost:3000', 'http://localhost:5000', 'https://crypt-web.web.app'],
+    originWhitelist: ['http://localhost:3000/', 'http://localhost:5000/', 'https://crypt-web.web.app/'],
     requireHeaders: ['origin'],
     checkRateLimit,
     removeHeaders: [
